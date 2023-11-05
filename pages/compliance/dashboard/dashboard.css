@@ -1,0 +1,36 @@
+
+.dashboard-home{
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard-side{
+    /* border: 1px solid red; */
+    position: fixed;
+    width: 20%;
+    overflow-y: auto;
+    min-height: 100vh;
+}
+.dashboard-body{
+    /* border: 1px solid green; */
+    width: 80%;
+    margin-left: 20%;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+.mobile-nav_dashboard{
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .dashboard-side{
+        display: none;
+    }
+    .dashboard-body{
+        width: 100%;
+        margin: 0;
+    }
+    .dashboard-links{
+        gap: 15px;
+    }
+    
+}
