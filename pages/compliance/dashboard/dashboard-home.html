@@ -29,6 +29,10 @@
       type="text/javascript"
       defer
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
     <title>FCMB</title>
   </head>
   <body>
@@ -44,37 +48,71 @@
             <h4>Search Query</h4>
           </div>
           <div class="search-line"></div>
-          <div class="search-bottom">
-            <div class="input-fields">
+          <form>
+            <div class="search-bottom">
+              <div class="input-fields">
                 <div class="search-query_field">
-                  <img src="../../../assets/images/search-black.png" alt="logo" />
+                  <img
+                    src="../../../assets/images/search-black.png"
+                    alt="logo"
+                  />
                   <input type="text" placeholder="Search" />
                 </div>
                 <div class="search-query_cont">
                   <div class="select-query_field">
-                      <!-- <input id="select" type="text" placeholder="Finacle 10" /> -->
-                      <p id="select">Finacle 10</p>
-                      <img src="../../../assets/images/chevron-down.png" alt="logo" />
+                    <!-- <input id="select" type="text" placeholder="Finacle 10" /> -->
+                    <p id="select">Finacle 10</p>
+                    <img
+                      src="../../../assets/images/chevron-down.png"
+                      alt="logo"
+                    />
                   </div>
                   <div id="options" class="none options"></div>
                 </div>
                 <div class="date-query_field">
-                    <img src="../../../assets/images/calendar.png" alt="logo" />
-                    <input type="text" disabled placeholder="Tran Date" />
+                  <img src="../../../assets/images/calendar.png" alt="logo" />
+                  <input type="date" id="myDateInput" placeholder="Tran Date" />
                 </div>
                 <div class="date-query_field">
-                    <img src="../../../assets/images/calendar.png" alt="logo" />
-                    <input type="text" disabled placeholder="Select date range" />
+                  <img src="../../../assets/images/calendar.png" alt="logo" />
+                  <input type="date" placeholder="Select date range" />
                 </div>
-            </div>
-            <div class="search-input-btn">
+              </div>
+              <div class="search-input-btn">
                 <button>Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="dash-page_body">
+          <div class="dash-page_left">
+            <div class="mgt-report">
+              <h3>Management Report</h3>
+              <div class="mgt-report_line"></div>
+              <div id="mgt-body" class="mgt-body"></div>
+            </div>
+            <div class="recent-searches">
+              <h3>Recent Searches</h3>
+              <div class="recent-searches_table">
+                <table id="dataTable">
+                  <thead>
+                    <tr></tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="dash-page_right">
+            <div class="quick-links">
+              <h3>Quick Links</h3>
+              <div class="quick-links_line"></div>
+              <div id="quick-link"></div>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./dashboard.js"></script>
   </body>
 </html>

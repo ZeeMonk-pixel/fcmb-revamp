@@ -6,11 +6,13 @@ compTemplate.innerHTML = `
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}.side-nav{
+}
+.side-nav{
     background: var(--primary-900, #1D002E);
     min-height: 100vh;
     padding: 32px 24px;
     position: relative;
+    overflow-y: auto;
 }
 .logo-head{
     display: flex;
@@ -131,6 +133,12 @@ a{
     .side-nav{
         display: none;
     }
+    
+}
+@media (max-width: 1350px) {
+  .log-out{
+      margin-top: 45px;
+  }
     
 }
 </style>
