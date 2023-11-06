@@ -134,7 +134,6 @@ a{
 @media (max-width: 900px) {
     .mobile-nav{
         display: flex;
-        margin: 10px;
     }
     .close{
         display: none;

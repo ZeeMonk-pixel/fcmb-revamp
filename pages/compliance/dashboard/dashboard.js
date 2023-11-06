@@ -1,32 +1,24 @@
 
-// var links = document.getElementsByTagName('a');
+const selectDiv = document.getElementById("select");
+const optionDiv = document.getElementById("options");
 
-// for (var i = 0; i < links.length; i++) {
-//   links[i].addEventListener("click", function() {
-//     var current = document.querySelector("a.active");
-//     if (current) {
-//         current.classList.remove("active");
-//     }
-//     this.className += " active";
-//   });
-// }
+const opsArr = ["Finacle 10", "Work Flow", "LTP Eligibility"];
 
-// const menu = document.querySelector(".mobile-menu");
-// const menuItems = document.querySelectorAll(".single-link");
-// const hamburger= document.querySelector(".mobile-nav");
-// const closeIcon= document.querySelector(".closeIcon");
-// const menuIcon = document.querySelector(".menuIcon");
+opsArr.forEach((item) => {
+    const eachItem = document.createElement("p"); 
+    eachItem.textContent = item; 
+    optionDiv.appendChild(eachItem); 
+    eachItem.addEventListener('click', function(){
+        selectDiv.textContent = eachItem.textContent;
+        optionDiv.classList.add("none");
+    })
+});
 
-// function toggleMenu() {
-//   if (menu.classList.contains("showMenu")) {
-//     menu.classList.remove("showMenu");
-//     closeIcon.style.display = "none";
-//     menuIcon.style.display = "block";
-//   } else {
-//     menu.classList.add("showMenu");
-//     closeIcon.style.display = "block";
-//     menuIcon.style.display = "none";
-//   }
-// }
-
-// hamburger.addEventListener("click", toggleMenu);
+selectDiv.addEventListener('click', function() {
+    currentClass = optionDiv.classList;
+    if(currentClass.contains("none")){
+        optionDiv.classList.remove("none");
+    } else {
+        optionDiv.classList.add("none");
+    }
+});
