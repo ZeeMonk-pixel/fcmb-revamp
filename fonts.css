@@ -3,11 +3,17 @@
     src: url('./assets/font/Gotham-Font/GothamBook.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
-  }
+}
 
 @font-face {
     font-family: 'Gotham Bold';
-    src: url('./assets/font/Gotham-Font/GothamMedium.ttf') format('truetype'); 
+    src: url('./assets/font/Gotham-Font/GothamBold.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
-  }
+}
+@font-face {
+    font-family: 'Gotham Bold Italic';
+    src: url('./assets/font/Gotham-Font/GothamMediumItalic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}

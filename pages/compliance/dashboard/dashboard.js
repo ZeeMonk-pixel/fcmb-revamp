@@ -24,29 +24,19 @@ $(document).ready(function() {
 
 const mgtReport = [
     {
-      img1: '../../../assets/images/file.png',
       text: 'Outward Clearing Report',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
-      img1: '../../../assets/images/file.png',
       text: 'Swift Messages',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
-      img1: '../../../assets/images/file.png',
       text: 'Balance Sheet Deposit',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
-      img1: '../../../assets/images/file.png',
       text: 'Smart Card Validation',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
-      img1: '../../../assets/images/file.png',
       text: 'Staff Promo',
-      img2: '../../../assets/images/arrow-right.png'
     },
 ];
 
@@ -58,8 +48,8 @@ $(document).ready(function() {
       const $textDiv = $('<div>').addClass('mgt-text');
       const $arrowDiv = $('<div>').addClass('arrow-div');
     
-      const $img1 = $('<img>').attr('src', item.img1).attr('alt', 'icon');
-      const $img2 = $('<img>').attr('src', item.img2).attr('alt', 'icon');
+      const $img1 = $('<img>').attr('src', "../../../assets/images/file.png").attr('alt', 'icon');
+      const $img2 = $('<img>').attr('src', "../../../assets/images/arrow-right.png").attr('alt', 'icon');
     
       const $text = $('<p>').text(item.text);
     
@@ -73,47 +63,36 @@ $(document).ready(function() {
 const quickLinks = [
     {
       text: 'Finbank Statement',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Loan Self Service',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Loan Mastercard Transactions',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Draft Walk-in Charge Calculator',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Custom Duty Charge Calculator',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Custome Duty Walk-in Charge Calulator',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Memo Lift',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Risk Factor Assesment',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Freeze Account',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'Unfreeze Account',
-      img2: '../../../assets/images/arrow-right.png'
     },
     {
       text: 'New Reports',
-      img2: '../../../assets/images/arrow-right.png'
     },
 ];
 
@@ -123,7 +102,7 @@ $(document).ready(function() {
     $.each(quickLinks, function(index, item) {
       const $itemDiv = $('<div>').addClass('each-quick_link');
     
-      const $img2 = $('<img>').attr('src', item.img2).attr('alt', 'icon');
+      const $img2 = $('<img>').attr('src', "../../../assets/images/arrow-right.png").attr('alt', 'icon');
       const $text = $('<p>').text(item.text);
     
       $itemDiv.append($text, $img2);
@@ -139,28 +118,24 @@ $(document).ready(function() {
         customerId: "2REYDRYJ",
         customerName: "Chukwuka Chiemelie Esther",
         Date: "24 May, 2020<br> 23:18:33",
-        img: "../../../assets/images/chevron-right.png",
       },
       {
         sn: "2",
         customerId: "2REYDRYJ",
         customerName: "Chukwuka Chiemelie Esther",
         Date: "24 May, 2020<br> 23:18:33",
-        img: "../../../assets/images/chevron-right.png",
       },
       {
         sn: "3",
         customerId: "2REYDRYJ",
         customerName: "Chukwuka Chiemelie Esther",
         Date: "24 May, 2020<br> 23:18:33",
-        img: "../../../assets/images/chevron-right.png",
       },
       {
         sn: "4",
         customerId: "2REYDRYJ",
         customerName: "Chukwuka Chiemelie Esther",
         Date: "24 May, 2020<br> 23:18:33",
-        img: "../../../assets/images/chevron-right.png",
       },
     ];
   
@@ -181,7 +156,7 @@ $(document).ready(function() {
       $row.append('<td class="bold-text">' + item.customerName + '</td>');
       const dateParts = item.Date.split('<br>');
       $row.append('<td><span class="first-line">' + dateParts[0] + '</span><br><span class="second-line">' + dateParts[1] + '</span></td>');
-      $row.append('<td><img src="' + item.img + '"></td>');
+      $row.append('<td><img src="../../../assets/images/chevron-down.png"></td>');
       $tbody.append($row);
     });
   });

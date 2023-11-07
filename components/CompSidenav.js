@@ -12,7 +12,7 @@ compTemplate.innerHTML = `
     min-height: 100vh;
     padding: 32px 24px;
     position: relative;
-    overflow-y: auto;
+    overflow: hidden;
 }
 .logo-head{
     display: flex;

@@ -134,6 +134,8 @@ a{
 @media (max-width: 900px) {
     .mobile-nav{
         display: flex;
+        // border: 2px solid red;
+        // background: red;
     }
     .close{
         display: none;
@@ -143,12 +145,17 @@ a{
     }
     .closeIcon {
         display: none;
+        position: fixed;
+        // background: white;
+        right: 30px;
+        top: 20px;
+        z-index: 100;
     }
     .mobile-menu {
         position: fixed;
         transform: translateY(-110%);
         transition: transform 0.2s;
-        top: 40px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -177,8 +184,8 @@ a{
   <div class="mobile-nav">
     <img class="menuIcon" src="../../../assets/images/menu.png" alt="menu" />
     <img class="closeIcon" src="../../../assets/images/close.png" alt="close" />
-  </div>
-  <div class="mobile-menu">
+    </div>
+    <div class="mobile-menu">
     <div class="logo-head">
       <img src="../../../assets/images/logo-small.png" alt="logo" />
       <h2>INFOPOOL</h2>
@@ -259,6 +266,12 @@ class MobileNav extends HTMLElement {
 
     shadowRoot.appendChild(mobileTemplate.content);
 
+    
+    const menu = shadowRoot.querySelector(".mobile-menu");
+    const hamburger = shadowRoot.querySelector(".mobile-nav");
+    const closeIcon = shadowRoot.querySelector(".closeIcon");
+    const menuIcon = shadowRoot.querySelector(".menuIcon");
+
     const links = shadowRoot.querySelectorAll("a");
     let previousLink = null;
     const firstLink = links[0];
@@ -272,13 +285,10 @@ class MobileNav extends HTMLElement {
         }
         link.classList.add("active");
         previousLink = link;
+        menu.classList.remove("showMenu");
+        menuIcon.style.display = "block";
       });
     });
-
-    const menu = shadowRoot.querySelector(".mobile-menu");
-    const hamburger = shadowRoot.querySelector(".mobile-nav");
-    const closeIcon = shadowRoot.querySelector(".closeIcon");
-    const menuIcon = shadowRoot.querySelector(".menuIcon");
 
     function toggleMenu() {
       if (menu.classList.contains("showMenu")) {
