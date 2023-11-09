@@ -84,339 +84,19 @@ $(document).ready(function () {
     "Other Accounts",
     "Loan Accounts",
   ];
-  const cusDetails = [
-    {
-      text: "General Details",
-    },
-    {
-      text: "Account Information",
-    },
-  ];
-  const accDetails = [
-    {
-      text: "General Information",
-    },
-    {
-      text: "Advanced Information",
-    },
-    {
-      text: "Mandate Information",
-    },
-    {
-      text: "Account Maintenance  Information",
-    },
-  ];
 
   const $container = $("#acc-tabs");
   var activeTab = accountTabs[0];
   const $cusDetailsContainer = $("#customer-details");
+  const $accDetailsContainer = $("#account-details");
+  const $transHistContainer = $("#trans-history");
+  const $loanAccContainer = $("#loan-accounts");
+  const $otherAccContainer = $("#other-accounts");
+  const $pag = $(".pagination");
+  $cusDetailsContainer.removeClass("none");
+  $cusDetailsContainer.addClass("flex");
 
-  function updateCustomerDetails() {
-    $cusDetailsContainer.empty();
-    $.each(cusDetails, function (index, item) {
-      const $itemDiv = $("<div>").addClass("customer-item");
-      const $eachTabImg = $("<img>").attr("src", "../../../assets/images/chevron-down.png").attr("alt", "icon");
-      const $eachTab = $("<h4>").text(item.text);
-
-      $itemDiv.append($eachTabImg, $eachTab);
-      $cusDetailsContainer.append($itemDiv);
-    });
-  }
-  function updateAccountDetails() {
-    $cusDetailsContainer.empty();
-    $.each(accDetails, function (index, item) {
-      const $itemDiv = $("<div>").addClass("acc-details-item");
-      const $eachTabImg = $("<img>").attr("src", "../../../assets/images/chevron-down.png").attr("alt", "icon");
-      const $eachTab = $("<h4>").text(item.text);
-
-      $itemDiv.append($eachTabImg, $eachTab);
-      $cusDetailsContainer.append($itemDiv);
-    });
-  }
-  function updateLoanAccounts() {
-    $cusDetailsContainer.empty();
-    const tableHead = [
-      "Loan Type",
-      "Account Number",
-      "Currency",
-      "Principal",
-      "Rate",
-      "Start Date",
-      "Tenor",
-      "Amount Left",
-      "Next Payment Date",
-    ];
-    const tableBody = [
-      {
-        loanType: "12VGRY",
-        accountNo: "12748hfdjg",
-        currency: "NGN",
-        principal: "300000",
-        rate: "300000",
-        startDate: "12th July, 2023",
-        tenor: "48 Months",
-        amtLeft: "N120,000,000",
-        nextPayment: "12th July, 2023",
-      },
-      {
-        loanType: "12VGRY",
-        accountNo: "12748hfdjg",
-        currency: "NGN",
-        principal: "300000",
-        rate: "300000",
-        startDate: "12th July, 2023",
-        tenor: "48 Months",
-        amtLeft: "N120,000,000",
-        nextPayment: "12th July, 2023",
-      },
-      {
-        loanType: "12VGRY",
-        accountNo: "12748hfdjg",
-        currency: "NGN",
-        principal: "300000",
-        rate: "300000",
-        startDate: "12th July, 2023",
-        tenor: "48 Months",
-        amtLeft: "N120,000,000",
-        nextPayment: "12th July, 2023",
-      },
-      {
-        loanType: "12VGRY",
-        accountNo: "12748hfdjg",
-        currency: "NGN",
-        principal: "300000",
-        rate: "300000",
-        startDate: "12th July, 2023",
-        tenor: "48 Months",
-        amtLeft: "N120,000,000",
-        nextPayment: "12th July, 2023",
-      },
-      {
-        loanType: "12VGRY",
-        accountNo: "12748hfdjg",
-        currency: "NGN",
-        principal: "300000",
-        rate: "300000",
-        startDate: "12th July, 2023",
-        tenor: "48 Months",
-        amtLeft: "N120,000,000",
-        nextPayment: "12th July, 2023",
-      },
-    ];
-
-    const $table = $("<table>").attr("id", "dataTable");
-    const $thead = $("<thead>").appendTo($table);
-    const $tbody = $("<tbody>").appendTo($table);
-
-    // Create table header
-    const $headerRow = $("<tr>").appendTo($thead);
-    tableHead.forEach(function (item) {
-      $headerRow.append("<th>" + item + "</th>");
-    });
-
-    // Create table body
-    tableBody.forEach(function (item) {
-      const $row = $("<tr>");
-      $row.append('<td class="faint-text">' + item.loanType + "</td>");
-      $row.append('<td class="faint-text copy-div">' + item.accountNo + '<span class="copy-img"><img src="../../../assets/images/copy.png" alt="icon" /></span>' + "</td>");
-      $row.append('<td class="faint-text">' + item.currency + "</td>");
-      $row.append('<td class="faint-text">' + item.principal + "</td>");
-      $row.append('<td class="faint-text">' + item.rate + "</td>");
-      $row.append('<td class="faint-text">' + item.startDate + "</td>");
-      $row.append('<td class="faint-text">' + item.tenor + "</td>");
-      $row.append('<td class="faint-text">' + item.amtLeft + "</td>");
-      $row.append('<td class="faint-text">' + item.nextPayment + "</td>");
-      $tbody.append($row);
-    });
-
-    $cusDetailsContainer.append($table);
-  }
-  function updateOtherAccounts() {
-    $cusDetailsContainer.empty();
-    const tableHead = [
-      "Account",
-      "Account Number",
-      "Account Type",
-      "Currency",
-      "Cleared",
-      "Uncleared",
-      "Available",
-    ];
-    const tableBody = [
-      {
-        account: "12748hfdjg",
-        accountNo: "12VGRY",
-        accountType: "Flax Account",
-        currency: "NGN",
-        cleared: "N120,000",
-        uncleared: "N120,000",
-        available: "N120,000,000",
-      },
-      {
-        account: "12748hfdjg",
-        accountNo: "12VGRY",
-        accountType: "Flax Account",
-        currency: "NGN",
-        cleared: "N120,000",
-        uncleared: "N120,000",
-        available: "N120,000,000",
-      },
-      {
-        account: "12748hfdjg",
-        accountNo: "12VGRY",
-        accountType: "Flax Account",
-        currency: "NGN",
-        cleared: "N120,000",
-        uncleared: "N120,000",
-        available: "N120,000,000",
-      },
-      {
-        account: "12748hfdjg",
-        accountNo: "12VGRY",
-        accountType: "Flax Account",
-        currency: "NGN",
-        cleared: "N120,000",
-        uncleared: "N120,000",
-        available: "N120,000,000",
-      },
-      {
-        account: "12748hfdjg",
-        accountNo: "12VGRY",
-        accountType: "Flax Account",
-        currency: "NGN",
-        cleared: "N120,000",
-        uncleared: "N120,000",
-        available: "N120,000,000",
-      },
-    ];
-
-    const $table = $("<table>").attr("id", "dataTable");
-    const $thead = $("<thead>").appendTo($table);
-    const $tbody = $("<tbody>").appendTo($table);
-
-    // Create table header
-    const $headerRow = $("<tr>").appendTo($thead);
-    tableHead.forEach(function (item) {
-      $headerRow.append("<th>" + item + "</th>");
-    });
-
-    // Create table body
-    tableBody.forEach(function (item) {
-      const $row = $("<tr>");
-      $row.append('<td class="faint-text">' + item.account + "</td>");
-      $row.append('<td class="faint-text">' + item.accountNo + "</td>");
-      $row.append('<td class="faint-text">' + item.accountType + "</td>");
-      $row.append('<td class="faint-text">' + item.currency + "</td>");
-      $row.append('<td class="faint-text">' + item.cleared + "</td>");
-      $row.append('<td class="faint-text">' + item.uncleared + "</td>");
-      $row.append('<td class="faint-text">' + item.available + "</td>");
-      $tbody.append($row);
-    });
-
-    $cusDetailsContainer.append($table);
-  }
-  function updateTransHist() {
-    $cusDetailsContainer.empty();
-    const tableHead = [
-      "Transaction Date",
-      "Reference",
-      "Description",
-      "Value",
-      "Deposit",
-      "Withdrawal",
-      "Balance",
-      "",
-    ];
-    const tableBody = [
-      {
-        date: "24 May, 2020<br> 23:18:33",
-        ref: "12VGRY",
-        des: "Description for transaction can be found here",
-        value: "24 May, 2020",
-        deposit: "N120,000",
-        withdraw: "N120,000",
-        bal: "N120,000,000",
-      },
-      {
-        date: "24 May, 2020<br> 23:18:33",
-        ref: "12VGRY",
-        des: "Description for transaction can be found here",
-        value: "24 May, 2020",
-        deposit: "N120,000",
-        withdraw: "N120,000",
-        bal: "N120,000,000",
-      },
-      {
-        date: "24 May, 2020<br> 23:18:33",
-        ref: "12VGRY",
-        des: "Description for transaction can be found here",
-        value: "24 May, 2020",
-        deposit: "N120,000",
-        withdraw: "N120,000",
-        bal: "N120,000,000",
-      },
-      {
-        date: "24 May, 2020<br> 23:18:33",
-        ref: "12VGRY",
-        des: "Description for transaction can be found here",
-        value: "24 May, 2020",
-        deposit: "N120,000",
-        withdraw: "N120,000",
-        bal: "N120,000,000",
-      },
-      {
-        date: "24 May, 2020<br> 23:18:33",
-        ref: "12VGRY",
-        des: "Description for transaction can be found here",
-        value: "24 May, 2020",
-        deposit: "N120,000",
-        withdraw: "N120,000",
-        bal: "N120,000,000",
-      },
-      {
-        date: "24 May, 2020<br> 23:18:33",
-        ref: "12VGRY",
-        des: "Description for transaction can be found here",
-        value: "24 May, 2020",
-        deposit: "N120,000",
-        withdraw: "N120,000",
-        bal: "N120,000,000",
-      },
-    ];
-
-    const $table = $("<table>").attr("id", "dataTable");
-    const $thead = $("<thead>").appendTo($table);
-    const $tbody = $("<tbody>").appendTo($table);
-
-    // Create table header
-    const $headerRow = $("<tr>").appendTo($thead);
-    tableHead.forEach(function (item) {
-      $headerRow.append("<th>" + item + "</th>");
-    });
-
-    // Create table body
-    tableBody.forEach(function (item) {
-      const $row = $("<tr>");
-      const dateParts = item.date.split("<br>");
-      $row.append(
-        '<td><span class="date-first-line">' +
-          dateParts[0] +
-          '</span><br><span class="date-second-line">' +
-          dateParts[1] +
-          "</span></td>"
-      );
-      $row.append('<td class="faint-text">' + item.ref + "</td>");
-      $row.append('<td class="faint-text">' + item.des + "</td>");
-      $row.append('<td class="faint-text">' + item.value + "</td>");
-      $row.append('<td class="faint-text">' + item.deposit + "</td>");
-      $row.append('<td class="faint-text">' + item.withdraw + "</td>");
-      $row.append('<td class="faint-text">' + item.bal + "</td>");
-      $row.append('<td><img src="../../../assets/images/chevron-right.png" alt="icon" /></td>');
-      $tbody.append($row);
-    });
-
-    $cusDetailsContainer.append($table);
-  }
+ 
 
   function updateTabSelection(selectedTab) {
     activeTab = selectedTab;
@@ -425,18 +105,63 @@ $(document).ready(function () {
       .find(".acc-tab-item:contains(" + activeTab + ")")
       .addClass("active-tab");
 
-    if (activeTab === "Customer Details") {
-      updateCustomerDetails();
+    if (activeTab === "Customer Details") { 
+      if ($cusDetailsContainer.hasClass("none")) {
+        $cusDetailsContainer.removeClass("none");
+        $cusDetailsContainer.addClass("flex");
+        $accDetailsContainer.addClass("none");
+        $accDetailsContainer.removeClass("flex");
+        $loanAccContainer.addClass("none");
+        $otherAccContainer.addClass("none");
+        $transHistContainer.addClass("none");
+        $pag.addClass('none');
+      }
     } else if (activeTab === "Transaction History") {
-      updateTransHist();
+      if ($transHistContainer.hasClass("none")) {
+        $accDetailsContainer.addClass("none");
+        $cusDetailsContainer.addClass("none");
+        $cusDetailsContainer.removeClass("flex");
+        $accDetailsContainer.removeClass("flex");
+        $loanAccContainer.addClass("none");
+        $otherAccContainer.addClass("none");
+        $transHistContainer.removeClass("none");
+        $pag.removeClass('none');
+      } 
     } else if (activeTab === "Account Details") {
-      updateAccountDetails();
-    } else if (activeTab === "Other Accounts"){
-        updateOtherAccounts();
-    } else if(activeTab === "Loan Accounts") {
-        updateLoanAccounts();
-    }else {
-      $cusDetailsContainer.empty(); // Clear the content for other tabs
+      if ($accDetailsContainer.hasClass("none")) {
+        $accDetailsContainer.removeClass("none");
+        $cusDetailsContainer.addClass("none");
+        $cusDetailsContainer.removeClass("flex");
+        $accDetailsContainer.addClass("flex");
+        $loanAccContainer.addClass("none");
+        $otherAccContainer.addClass("none");
+        $transHistContainer.addClass("none");
+        $pag.addClass('none');
+      } 
+    } else if (activeTab === "Other Accounts") {
+      if ($otherAccContainer.hasClass("none")) {
+        $accDetailsContainer.addClass("none");
+        $cusDetailsContainer.addClass("none");
+        $cusDetailsContainer.removeClass("flex");
+        $accDetailsContainer.removeClass("flex");
+        $loanAccContainer.addClass("none");
+        $otherAccContainer.removeClass("none");
+        $transHistContainer.addClass("none");
+        $pag.removeClass('none');
+      } 
+    } else if (activeTab === "Loan Accounts") {
+      if ($loanAccContainer.hasClass("none")) {
+        $accDetailsContainer.addClass("none");
+        $cusDetailsContainer.addClass("none");
+        $cusDetailsContainer.removeClass("flex");
+        $accDetailsContainer.removeClass("flex");
+        $loanAccContainer.removeClass("none");
+        $otherAccContainer.addClass("none");
+        $transHistContainer.addClass("none");
+        $pag.removeClass('none');
+      }
+    } else {
+      // $cusDetailsContainer.empty(); 
     }
   }
 
@@ -456,7 +181,7 @@ $(document).ready(function () {
     $container.append($itemDiv);
   });
 
-  updateCustomerDetails(); // Load initial content for the "Customer Details" tab
+  // updateCustomerDetails(); 
 });
 
 $(document).ready(function () {
@@ -467,21 +192,50 @@ $(document).ready(function () {
     "Export as CAP Excel",
   ];
   const $selectDiv = $("#export-div");
-  const $optionDiv = $("#export-opts");
-
+  const $cusDetailsContainer = $("#export-opts");
+  
   $.each(opsArr, function (index, item) {
     const $eachItem = $("<p>").text(item);
-    $optionDiv.append($eachItem);
+    $cusDetailsContainer.append($eachItem);
     $eachItem.on("click", function () {
-      $optionDiv.addClass("none");
+      $cusDetailsContainer.addClass("none");
     });
   });
-
+  
   $selectDiv.on("click", function () {
-    if ($optionDiv.hasClass("none")) {
-      $optionDiv.removeClass("none");
+    if ($cusDetailsContainer.hasClass("none")) {
+      $cusDetailsContainer.removeClass("none");
     } else {
-      $optionDiv.addClass("none");
+      $cusDetailsContainer.addClass("none");
     }
   });
+  
+  const $selectModal = $("#trans-history tbody tr");
+  const $myModal = $("#trans-modal");
+  const $newModal = $("#trans-details");
+  const $closeNewModal = $("#trans-details img");
+  const $closeBtn = $(".trans-modal_head img");
+  const $loadNewModal = $(".id-detail p");
+
+  $selectModal.on('click', function(){
+    if ($myModal.hasClass('none')){
+      $myModal.removeClass('none');
+    }
+  });
+  $closeBtn.on('click', function(){
+    $myModal.addClass('none');
+  });
+  $loadNewModal.on('click', function(){
+    if ($newModal.hasClass('none')){
+      $newModal.removeClass('none');
+      $myModal.addClass('none');
+    }
+  })
+  $closeNewModal.on('click', function(){
+    $newModal.addClass('none');
+  })
+  
+
+
 });
+

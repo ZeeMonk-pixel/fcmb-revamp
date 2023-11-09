@@ -30,6 +30,11 @@
       defer
     ></script>
     <script
+      src="../../../components/Pagination.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
     ></script>
@@ -59,9 +64,9 @@
                   <input type="text" placeholder="Search" />
                 </div>
                 <div class="search-query_cont">
-                  <div class="select-query_field">
+                  <div id="select" class="select-query_field">
                     <!-- <input id="select" type="text" placeholder="Finacle 10" /> -->
-                    <p id="select">Finacle 10</p>
+                    <p>Finacle 10</p>
                     <img
                       src="../../../assets/images/chevron-down.png"
                       alt="logo"
@@ -93,17 +98,87 @@
             <div class="mgt-report">
               <h3>Management Report</h3>
               <div class="mgt-report_line"></div>
-              <div id="mgt-body" class="mgt-body"></div>
+              <div id="mgt-body" class="mgt-body">
+                <div class="mgt-item">
+                  <div class="mgt-text">
+                    <img src="../../../assets/images/file.png" alt="icon">
+                    <p>Outward Clearing Report</p>
+                  </div>
+                  <div class="arrow-div">
+                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  </div>
+                </div>
+                <div class="mgt-item">
+                  <div class="mgt-text">
+                    <img src="../../../assets/images/file.png" alt="icon">
+                    <p>Swift Messages</p>
+                  </div>
+                  <div class="arrow-div">
+                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  </div>
+                </div>
+                <div class="mgt-item">
+                  <div class="mgt-text">
+                    <img src="../../../assets/images/file.png" alt="icon">
+                    <p>Balance Sheet Deposit</p>
+                  </div>
+                  <div class="arrow-div">
+                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  </div>
+                </div>
+                <div class="mgt-item">
+                  <div class="mgt-text">
+                    <img src="../../../assets/images/file.png" alt="icon">
+                    <p>Smart Card Validation</p>
+                  </div>
+                  <div class="arrow-div">
+                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  </div>
+                </div>
+                <div class="mgt-item">
+                  <div class="mgt-text">
+                    <img src="../../../assets/images/file.png" alt="icon">
+                    <p>Staff Promo</p>
+                  </div>
+                  <div class="arrow-div">
+                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="recent-searches">
               <h3>Recent Searches</h3>
               <div class="recent-searches_table">
                 <table id="dataTable">
                   <thead>
-                    <tr></tr>
+                    <tr>
+                      <th>S/N</th>
+                      <th>Customer ID</th>
+                      <th>Customer Name</th>
+                      <th>Date</th>
+                      <th></th>
+                    </tr>
                   </thead>
-                  <tbody></tbody>
+                  <tbody>
+                    <tr>
+                      <td class="bold-text">1</td>
+                      <td class="bold-text">2REYDRYJ</td>
+                      <td class="bold-text">Chukwuka Chiemelie Esther</td>
+                      <td class="bold-text"><span class="first-line">24 May, 2020</span>
+                        <br> <span class="second-line">23:18:33</span></td>
+                      <td class="bold-text"><img src="../../../assets/images/chevron-right.png" alt="icon" /></td>
+                    </tr>
+                  </tbody>
                 </table>
+                <div class="pagination">
+                  <a class="prev" href="#"><img src="../../../assets//images/left.png" alt="icon">Previous</a>
+                  <!-- Page numbers will be added here dynamically -->
+                  <div class="numbers-arr">
+                      <div id="dots"></div>
+                      <div id="right-arr"></div>
+                  </div>
+                  <a class="next" href="#">Next <img src="../../../assets/images/right.png" alt="icon"></a>
+                </div>
               </div>
             </div>
           </div>
@@ -111,12 +186,58 @@
             <div class="quick-links">
               <h3>Quick Links</h3>
               <div class="quick-links_line"></div>
-              <div id="quick-link"></div>
+              <div id="quick-link">
+                <div class="each-quick_link">
+                  <p>Finbank Statement</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Loan Self Service</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Loan Mastercard Transactions</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Draft Walk-in Charge Calculator</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Custom Duty Charge Calculator</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Custome Duty Walk-in Charge Calulator</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Memo Lift</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Risk Factor Assesment</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Freeze Account</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>Unfreeze Account</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+                <div class="each-quick_link">
+                  <p>New Reports</p>
+                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
     <script src="./dashboard.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

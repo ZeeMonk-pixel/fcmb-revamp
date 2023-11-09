@@ -43,7 +43,7 @@
   </head>
   <body>
     <main class="dashboard-home">
-    <div id="trans-details" class="transaction-modal none">
+    <!-- <div id="trans-details" class="transaction-modal none">
         <div class="trans-modal_head">
             <h3>Transaction Explorer</h3>
             <img src="../../../assets/images/trans-close.png" alt="icon">
@@ -130,7 +130,7 @@
                 <p>Amos Benjamin</p>
             </div>
         </div>
-    </div>
+    </div> -->
       <div class="dashboard-side">
         <comp-side></comp-side>
       </div>
@@ -138,20 +138,10 @@
         <mobile-nav></mobile-nav>
         <go-back></go-back>
         <div class="account-trans">
-          <h2>Account Transactions</h2>
+          <h2>Workflow Information</h2>
           <p>
-            Statement period from <span>09 march 2023 to 30 march, 2023</span>
+            Requests from <span>09 march 2023 to 30 march, 2023</span>
           </p>
-        </div>
-        <div class="account-info_cont">
-          <div class="account-info">
-            <h3>Account Details</h3>
-            <div id="account-info-content"></div>
-          </div>
-          <div class="account-info">
-            <h3>Information Pod</h3>
-            <div id="info-pod-content"></div>
-          </div>
         </div>
         <div class="search-query">
           <div class="search-top acc-top">
@@ -162,74 +152,99 @@
                   src="../../../assets/images/download-cloud.png"
                   alt="icon"
                 />
-                <p>Export Statement</p>
-                <img
-                  src="../../../assets/images/chevron-down-gray.png"
-                  alt="icon"
-                />
+                <p>Export</p>
               </div>
-              <div id="export-opts" class="none"></div>
+              <!-- <div id="export-opts" class="none"></div> -->
             </div>
           </div>
           <div class="search-line"></div>
           <div class="search-bottom">
-            <div id="acc-tabs"></div>
-            <div id="customer-details" class="none">
-              <div class="customer-item">
-                <img src="../../../assets/images/chevron-down.png" alt="icon" />
-                <h4>General Details</h4>
-              </div>
-              <div class="customer-item">
-                <img src="../../../assets/images/chevron-down.png" alt="icon" />
-                <h4>Account Information</h4>
-              </div>
-            </div>
-            <div id="account-details" class="none">
-              <div class="acc-details-item">
-                <img src="../../../assets/images/chevron-down.png" alt="icon" />
-                <h4>General Information</h4>
-              </div>
-              <div class="acc-details-item">
-                <img src="../../../assets/images/chevron-down.png" alt="icon" />
-                <h4>Advanced Information</h4>
-              </div>
-              <div class="acc-details-item">
-                <img src="../../../assets/images/chevron-down.png" alt="icon" />
-                <h4>Mandate Information</h4>
-              </div>
-              <div class="acc-details-item">
-                <img src="../../../assets/images/chevron-down.png" alt="icon" />
-                <h4>Account Maintenance Information</h4>
-              </div>
-            </div>
+            <div id="acc-tabs" class="acc-tabs"></div>
             <div class="table-container">
-              <table id="trans-history" class=" none">
+              <table id="customer-details" class=" none">
                 <thead>
                   <tr>
-                    <th>Transaction Date</th>
-                    <th>Reference</th>
-                    <th>Description</th>
-                    <th>Value</th>
-                    <th>Deposit</th>
-                    <th>Withdrawal</th>
-                    <th>Balance</th>
+                    <th>S/N</th>
+                    <th>Request ID</th>
+                    <th>Request Name here</th>
+                    <th>Requester</th>
+                    <th>Start Date</th>
+                    <th>Last Modified</th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="small-text">
-                      <span class="first-line">24 May, 2020</span> <br />
-                      <span class="second-line">23:18:33</span>
-                    </td>
+                    <td class="faint-text">1</td>
                     <td class="faint-text">12VGRYJ</td>
                     <td class="faint-text">
-                      Description for transaction can be found here
+                        Change of name
                     </td>
+                    <td class="faint-text">Chukwuka Chiemelie Esther</td>
                     <td class="faint-text">24 May, 2020</td>
-                    <td class="faint-text">N120,000</td>
-                    <td class="faint-text">N120,000</td>
-                    <td class="faint-text">N120,000,000</td>
+                    <td class="faint-text">24 May, 2020</td>
+                    <td class="faint-text">
+                      <img
+                        src="../../../assets/images/chevron-right.png"
+                        alt="icon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="account-details" class=" none">
+                <thead>
+                  <tr>
+                    <th>S/N</th>
+                    <th>Request ID</th>
+                    <th>Request Name here</th>
+                    <th>Requester</th>
+                    <th>Start Date</th>
+                    <th>Last Modified</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="faint-text">1</td>
+                    <td class="faint-text">12VGRYJ</td>
+                    <td class="faint-text">
+                        Change of name
+                    </td>
+                    <td class="faint-text">Chukwuka Chiemelie Esther</td>
+                    <td class="faint-text">24 May, 2020</td>
+                    <td class="faint-text">24 May, 2020</td>
+                    <td class="faint-text">
+                      <img
+                        src="../../../assets/images/chevron-right.png"
+                        alt="icon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table id="trans-history" class=" none">
+                <thead>
+                  <tr>
+                    <th>S/N</th>
+                    <th>Request ID</th>
+                    <th>Request Name here</th>
+                    <th>Requester</th>
+                    <th>Start Date</th>
+                    <th>Last Modified</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="faint-text">1</td>
+                    <td class="faint-text">12VGRYJ</td>
+                    <td class="faint-text">
+                        Change of name
+                    </td>
+                    <td class="faint-text">Chukwuka Chiemelie Esther</td>
+                    <td class="faint-text">24 May, 2020</td>
+                    <td class="faint-text">24 May, 2020</td>
                     <td class="faint-text">
                       <img
                         src="../../../assets/images/chevron-right.png"
@@ -240,69 +255,35 @@
                 </tbody>
               </table>
               <table  id="other-accounts" class="none">
-                  <thead>
-                    <tr>
-                      <th>Account</th>
-                      <th>Account Number</th>
-                      <th>Account Type</th>
-                      <th>Currency</th>
-                      <th>Cleared</th>
-                      <th>Withdrawal</th>
-                      <th>Available</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="faint-text">12748hfdjg</td>
-                      <td class="faint-text">12VGRYJ</td>
-                      <td class="faint-text">Flax Account</td>
-                      <td class="faint-text">NGN</td>
-                      <td class="faint-text">N120,000</td>
-                      <td class="faint-text">N120,000</td>
-                      <td class="faint-text">N120,000,000</td>
-                      <td class="faint-text">
-                        <img
-                          src="../../../assets/images/chevron-right.png"
-                          alt="icon"
-                        />
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table id="loan-accounts" class="none">
-                  <thead>
-                    <tr>
-                      <th>Loan Type</th>
-                      <th>Account Number</th>
-                      <th>Currency</th>
-                      <th>Principal</th>
-                      <th>Rate</th>
-                      <th>Start Date</th>
-                      <th>Tenor</th>
-                      <th>Amount Left</th>
-                      <th>Next Payment Date</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="bold-text">12VGRY</td>
-                      <td class="faint-text copy-div">
-                        12748hfdjg<img
-                          src="../../../assets/images/copy.png"
-                          alt="icon"
-                        />
-                      </td>
-                      <td class="faint-text">NGN</td>
-                      <td class="faint-text">300000</td>
-                      <td class="faint-text">300000</td>
-                      <td class="faint-text">12th July, 2023</td>
-                      <td class="faint-text">48 Months</td>
-                      <td class="faint-text">N120,000,000</td>
-                      <td class="faint-text">12th July, 2023</td>
-                    </tr>
-                  </tbody>
+                <thead>
+                  <tr>
+                    <th>S/N</th>
+                    <th>Request ID</th>
+                    <th>Request Name here</th>
+                    <th>Requester</th>
+                    <th>Start Date</th>
+                    <th>Last Modified</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="faint-text">1</td>
+                    <td class="faint-text">12VGRYJ</td>
+                    <td class="faint-text">
+                        Change of name
+                    </td>
+                    <td class="faint-text">Chukwuka Chiemelie Esther</td>
+                    <td class="faint-text">24 May, 2020</td>
+                    <td class="faint-text">24 May, 2020</td>
+                    <td class="faint-text">
+                      <img
+                        src="../../../assets/images/chevron-right.png"
+                        alt="icon"
+                      />
+                    </td>
+                  </tr>
+                </tbody>
                 </table>
                 <div class="pagination none">
                   <a class="prev" href="#"
@@ -325,7 +306,7 @@
         </div>
       </div>
     </main>
-    <script src="./accountTrans.js"></script>
+    <script src="./workFLow.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

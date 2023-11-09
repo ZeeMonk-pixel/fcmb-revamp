@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link href="./dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="../../../main.css" rel="stylesheet" type="text/css" />
+    <link href="../../../fonts.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/gotham-fonts@1.0.3/css/gotham-rounded.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha384-... (integrity value) ..."
+      crossorigin="anonymous"
+    />
+    <script
+      src="../../../components/CompSidenav.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
+      src="../../../components/MobileNav.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
+      src="../../../components/Pagination.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <title>FCMB</title>
+  </head>
+  <body>
+    <main class="dashboard-home">
+      <div class="dashboard-side">
+        <comp-side></comp-side>
+      </div>
+      <div class="dashboard-body">
+        <mobile-nav></mobile-nav>
+        <h2>Welcome, Chukwuka Esther</h2>
+        <div class="search-query">
+          <div class="search-top">
+            <h4>Search Query</h4>
+          </div>
+          <div class="search-line"></div>
+          <form>
+            <div class="search-bottom">
+              <div class="input-fields">
+                <div class="search-query_field">
+                  <img
+                    src="../../../assets/images/search-black.png"
+                    alt="logo"
+                  />
+                  <input type="text" placeholder="Search" />
+                </div>
+                <div class="search-query_cont">
+                  <div id="select" class="select-query_field">
+                    <!-- <input id="select" type="text" placeholder="Finacle 10" /> -->
+                    <p>Finacle 10</p>
+                    <img
+                      src="../../../assets/images/chevron-down.png"
+                      alt="logo"
+                    />
+                  </div>
+                  <div class="opt-cont">
+                    <div id="options" class="none options"></div>
+                  </div>
+                </div>
+                <div class="date-query_field">
+                  <img src="../../../assets/images/calendar.png" alt="logo" />
+                  <input type="date" id="myDateInput" placeholder="Tran Date" />
+                  <label>Tran Date</label>
+                </div>
+                <div class="date-query_field big-label">
+                  <img src="../../../assets/images/calendar.png" alt="logo" />
+                  <input type="date" placeholder="Select date range" />
+                  <label>Select date range</label>
+                </div>
+              </div>
+              <div class="search-input-btn">
+                <button type="submit">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="dash-page_body">
+            <div class="recent-searches">
+              <h3>7 Records Found</h3>
+              <div class="recent-searches_table recods-table">
+                <table id="dataTable">
+                  <thead>
+                    <tr>
+                      <th>S/N</th>
+                      <th>Account Name</th>
+                      <th>Currency</th>
+                      <th>Product</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="faint-text">1</td>
+                      <td class="faint-text">Chukwuka Chiemelie Esther</td>
+                      <td class="faint-text">NGN</td>
+                      <td class="faint-text">Flax Account</td>
+                      <td class="bold-text"><img src="../../../assets/images/chevron-right.png" alt="icon" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- <div class="pagination">
+                  <a class="prev" href="#"><img src="../../../assets//images/left.png" alt="icon">Previous</a>
+                  <div class="numbers-arr">
+                      <div id="dots"></div>
+                      <div id="right-arr"></div>
+                  </div>
+                  <a class="next" href="#">Next <img src="../../../assets/images/right.png" alt="icon"></a>
+                </div> -->
+              </div>
+            </div>
+        </div>
+      </div>
+    </main>
+    <script src="./dashboard.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

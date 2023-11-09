@@ -195,13 +195,13 @@ a{
       <input type="text" placeholder="Search" />
     </div>
     <div class="dashboard-links">
-      <a class="active" href="#home"
+      <a href="/pages/compliance/dashboard/dashboard-home.html"
         ><div class="single-link">
           <img src="../../../assets/images/bar-chart.png" alt="icon" />
           <h4>Home</h4>
         </div></a
       >
-      <a href="#info"
+      <a href="/pages/compliance/dashboard/information.html"
         ><div class="single-link">
           <img src="../../../assets/images/info.png" alt="icon" />
           <h4>Information</h4>
@@ -273,20 +273,23 @@ class MobileNav extends HTMLElement {
     const menuIcon = shadowRoot.querySelector(".menuIcon");
 
     const links = shadowRoot.querySelectorAll("a");
+    const newLink = window.location.href;
     let previousLink = null;
     const firstLink = links[0];
     links.forEach(function (link) {
+      if (newLink.includes(link.href) ){
+        link.classList.add('active');
+        previousLink = link;
+      }
       link.addEventListener("click", function (e) {
         if (previousLink === null) {
-          firstLink.classList.remove("active");
+            firstLink.classList.remove('active'); 
         }
         if (previousLink) {
-          previousLink.classList.remove("active");
+            previousLink.classList.remove('active'); 
         }
-        link.classList.add("active");
+        link.classList.add('active');
         previousLink = link;
-        menu.classList.remove("showMenu");
-        menuIcon.style.display = "block";
       });
     });
 

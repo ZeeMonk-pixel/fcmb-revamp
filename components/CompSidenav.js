@@ -152,13 +152,13 @@ a{
     <input type="text" placeholder="Search" />
   </div>
   <div class="dashboard-links">
-    <a class="active" href="#home"
+    <a href="../dashboard/dashboard-home.html"
       ><div class="single-link">
         <img src="../../../assets/images/bar-chart.png" alt="icon" />
         <h4>Home</h4>
       </div></a
     >
-    <a href="#info"
+    <a href="../dashboard/information.html"
       ><div class="single-link">
         <img src="../../../assets/images/info.png" alt="icon" />
         <h4>Information</h4>
@@ -179,7 +179,7 @@ a{
         <h4>Application</h4>
       </div></a
     >
-    <a href="#report"
+    <a href="../dashboard/reporting.html"
       ><div class="single-link">
         <img
           src="../../../assets/images/check-square.png"
@@ -223,9 +223,14 @@ class CompSidenav extends HTMLElement {
     shadowRoot.appendChild(compTemplate.content);
 
     const links = shadowRoot.querySelectorAll("a");
+    const newLink = window.location.href;
     let previousLink = null;
     const firstLink = links[0];
     links.forEach(function (link) {
+      if (newLink.includes(link.href) ){
+        link.classList.add('active');
+        previousLink = link;
+      }
       link.addEventListener("click", function (e) {
         if (previousLink === null) {
             firstLink.classList.remove('active'); 

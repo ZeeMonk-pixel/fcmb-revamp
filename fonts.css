@@ -7,6 +7,12 @@
 
 @font-face {
     font-family: 'Gotham Bold';
+    src: url('./assets/font/Gotham-Font/GothamMedium.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Very Bold';
     src: url('./assets/font/Gotham-Font/GothamBold.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;

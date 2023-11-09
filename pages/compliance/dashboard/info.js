@@ -7,7 +7,7 @@ function trimText(text, maxLength) {
 }
 
 $(document).ready(function() {
-    const opsArr = ["Finacle 10", "Work Flow", "LTP Eligibility"];
+    const opsArr = ["1. Divisions, Regions and zones", "2. Account Officers", "3. Branches and Branch Codes", "4. SBU and SBU Codes", "5. Products and Product Code", "6. Rates"];
     const $selectDiv = $("#select");
     const $selectDivP = $("#select p");
     const $optionDiv = $("#options");
@@ -16,7 +16,7 @@ $(document).ready(function() {
       const $eachItem = $("<p>").text(item);
       $optionDiv.append($eachItem);
       $eachItem.on("click", function() {
-        $selectDivP.text(trimText(item, 8));
+        $selectDivP.text(trimText(item, 15));
         $optionDiv.addClass("none");
       });
     });
@@ -29,5 +29,3 @@ $(document).ready(function() {
       }
     });
 });
-
-
