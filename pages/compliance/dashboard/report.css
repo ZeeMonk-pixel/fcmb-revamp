@@ -25,7 +25,11 @@
     justify-content: space-between;
 }
 #options{
-    height: 250px;
+    height: 450px;
+}
+#options-report{
+    height: 450px;
+    top: 100%;
 }
 .info-page_body{
     background: white;
@@ -74,5 +78,14 @@
     }
     .info-page_body{
         padding: 20px;
+    }
+    .report-search-cont{
+        width: 100%;
+    }
+}
+@media (max-width: 1350px) {
+    .report-search-cont{
+        width: 80%;
+        flex-wrap: wrap;
     }
 }

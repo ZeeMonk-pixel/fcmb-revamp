@@ -21,16 +21,6 @@
       crossorigin="anonymous"
     />
     <script
-      src="../../../components/CompSidenav.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <script
-      src="../../../components/MobileNav.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <script
       src="../../../components/Pagination.js"
       type="text/javascript"
       defer
@@ -43,11 +33,148 @@
   </head>
   <body>
     <main class="dashboard-home">
-      <div class="dashboard-side">
-        <comp-side></comp-side>
+      <div class="dashboard-side">        
+        <div class="side-nav">
+        <div class="logo-head">
+          <img src="../../../assets/images/logo-small.png" alt="logo" />
+          <h2>INFOPOOL</h2>
+        </div>
+        <div class="search-field">
+          <img src="../../../assets/images/search.png" alt="logo" />
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="dashboard-links">
+          <a href="../dashboard/dashboard-home.html"
+            ><div class="single-link">
+              <img src="../../../assets/images/bar-chart.png" alt="icon" />
+              <h4>Home</h4>
+            </div></a
+          >
+          <a class="active" href="../dashboard/information.html"
+            ><div class="single-link">
+              <img src="../../../assets/images/info.png" alt="icon" />
+              <h4>Information</h4>
+            </div></a
+          >
+          <a href="#cpc"
+            ><div class="single-link">
+              <img src="../../../assets/images/mails-switch.png" alt="icon" />
+              <h4>CPC</h4>
+            </div></a
+          >
+          <a href="../dashboard/application.html"
+            ><div class="single-link">
+              <img src="../../../assets/images/report.png" alt="icon" />
+              <h4>Application</h4>
+            </div></a
+          >
+          <a href="../dashboard/reporting.html"
+            ><div class="single-link">
+              <img src="../../../assets/images/check-square.png" alt="icon" />
+              <h4>Reporting</h4>
+            </div></a
+          >
+          <div class="single-link log-out">
+            <img src="../../../assets/images/log-out.png" alt="icon" />
+            <h4>Log out</h4>
+          </div>
+        </div>
+        <div class="dashboard-bottom">
+          <div class="dashboard-line"></div>
+          <div class="bottom-profile">
+            <img src="../../../assets/images/Avatar.png" alt="avatar" />
+            <div class="profile-cont">
+              <h4>Olivia Rhye</h4>
+              <p>SOL ID: 22334</p>
+            </div>
+          </div>
+          <div class="last-login">
+            <p>Last Login: <br />23:11:16 ; 24 MAY, 2023</p>
+          </div>
+        </div>
+      </div>
       </div>
       <div class="dashboard-body">
-        <mobile-nav></mobile-nav>
+        <div class="mobile-nav_dashboard">
+          <div class="mobile-nav">
+            <img
+              class="menuIcon"
+              src="../../../assets/images/menu.png"
+              alt="menu"
+            />
+            <img
+              class="closeIcon"
+              src="../../../assets/images/close.png"
+              alt="close"
+            />
+          </div>
+          <div class="mobile-menu">
+            <div class="logo-head">
+              <img src="../../../assets/images/logo-small.png" alt="logo" />
+              <h2>INFOPOOL</h2>
+            </div>
+            <div class="search-field">
+              <img src="../../../assets/images/search.png" alt="logo" />
+              <input type="text" placeholder="Search" />
+            </div>
+            <div class="dashboard-links">
+              <a
+                href="/pages/compliance/dashboard/dashboard-home.html"
+                ><div class="single-link">
+                  <img src="../../../assets/images/bar-chart.png" alt="icon" />
+                  <h4>Home</h4>
+                </div></a
+              >
+              <a class="active" href="/pages/compliance/dashboard/information.html"
+                ><div class="single-link">
+                  <img src="../../../assets/images/info.png" alt="icon" />
+                  <h4>Information</h4>
+                </div></a
+              >
+              <a href="#cpc"
+                ><div class="single-link">
+                  <img
+                    src="../../../assets/images/mails-switch.png"
+                    alt="icon"
+                  />
+                  <h4>CPC</h4>
+                </div></a
+              >
+              <a href="../dashboard/application.html"
+                ><div class="single-link">
+                  <img src="../../../assets/images/report.png" alt="icon" />
+                  <h4>Application</h4>
+                </div></a
+              >
+              <a href="../dashboard/reporting.html"
+                ><div class="single-link">
+                  <img
+                    src="../../../assets/images/check-square.png"
+                    alt="icon"
+                  />
+                  <h4>Reporting</h4>
+                </div></a
+              >
+              <div class="single-link log-out">
+                <img src="../../../assets/images/log-out.png" alt="icon" />
+                <h4>Log out</h4>
+              </div>
+            </div>
+            <div class="dashboard-bottom">
+              <div class="dashboard-line"></div>
+              <div class="bottom-profile">
+                <img src="../../../assets/images/Avatar.png" alt="avatar" />
+                <div class="profile-cont">
+                  <h4>Olivia Rhye</h4>
+                  <p>SOL ID: 22334</p>
+                </div>
+              </div>
+              <div class="last-login">
+                <p>Last Login: <br />23:11:16 ; 24 MAY, 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <h2>Information</h2>
         <div class="search-query info-query">
           <div class="search-top">

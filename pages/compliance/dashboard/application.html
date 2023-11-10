@@ -7,6 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
     <link href="./dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="./account.css" rel="stylesheet" type="text/css" />
     <link href="../../../main.css" rel="stylesheet" type="text/css" />
     <link href="../../../fonts.css" rel="stylesheet" type="text/css" />
     <link
@@ -43,7 +44,7 @@
             <input type="text" placeholder="Search" />
           </div>
           <div class="dashboard-links">
-            <a class="active" href="../dashboard/dashboard-home.html"
+            <a href="../dashboard/dashboard-home.html"
               ><div class="single-link">
                 <img src="../../../assets/images/bar-chart.png" alt="icon" />
                 <h4>Home</h4>
@@ -61,7 +62,7 @@
                 <h4>CPC</h4>
               </div></a
             >
-            <a href="../dashboard/application.html"
+            <a class="active" href="../dashboard/application.html"
               ><div class="single-link">
                 <img src="../../../assets/images/report.png" alt="icon" />
                 <h4>Application</h4>
@@ -117,9 +118,7 @@
               <input type="text" placeholder="Search" />
             </div>
             <div class="dashboard-links">
-              <a
-                class="active"
-                href="/pages/compliance/dashboard/dashboard-home.html"
+              <a href="/pages/compliance/dashboard/dashboard-home.html"
                 ><div class="single-link">
                   <img src="../../../assets/images/bar-chart.png" alt="icon" />
                   <h4>Home</h4>
@@ -140,7 +139,7 @@
                   <h4>CPC</h4>
                 </div></a
               >
-              <a href="../dashboard/application.html"
+              <a  class="active" href="../dashboard/application.html"
                 ><div class="single-link">
                   <img src="../../../assets/images/report.png" alt="icon" />
                   <h4>Application</h4>
@@ -175,90 +174,87 @@
             </div>
           </div>
         </div>
-        <h2>Welcome, Chukwuka Esther</h2>
-        <div class="search-query">
-          <div class="search-top">
-            <h4>Search Query</h4>
+        <h2>Application</h2>
+        <div class="acc-body">
+          <div class="acc-body_head">
+            <h3>Explore all applications</h3>
+            <div class="search-query_field">
+              <img
+                src="../../../assets/images/search-black.png"
+                alt="logo"
+              />
+              <input type="text" placeholder="Search" />
+            </div>
           </div>
-          <div class="search-line"></div>
-          <form>
-            <div class="search-bottom">
-              <div class="input-fields">
-                <div class="search-query_field">
-                  <img
-                    src="../../../assets/images/search-black.png"
-                    alt="logo"
-                  />
-                  <input type="text" placeholder="Search" />
-                </div>
-                <div class="search-query_cont">
-                  <div id="select" class="select-query_field">
-                    <!-- <input id="select" type="text" placeholder="Finacle 10" /> -->
-                    <p>Finacle 10</p>
-                    <img
-                      src="../../../assets/images/chevron-down.png"
-                      alt="logo"
-                    />
-                  </div>
-                  <div class="opt-cont">
-                    <div id="options" class="none options"></div>
-                  </div>
-                </div>
-                <div class="date-query_field">
-                  <img src="../../../assets/images/calendar.png" alt="logo" />
-                  <input type="date" id="myDateInput" placeholder="Tran Date" />
-                  <label>Tran Date</label>
-                </div>
-                <div class="date-query_field big-label">
-                  <img src="../../../assets/images/calendar.png" alt="logo" />
-                  <input type="date" placeholder="Select date range" />
-                  <label>Select date range</label>
-                </div>
-              </div>
-              <div class="search-input-btn">
-                <button type="submit">Search</button>
-              </div>
+          <div class="acc-body_details">
+            <div class="each-quick_link">
+              <p>Infopool</p>
+              <img
+                src="../../../assets/images/arrow-right.png"
+                alt="icon"
+              />
             </div>
-          </form>
-        </div>
-        <div class="dash-page_body">
-            <div class="recent-searches">
-              <h3>7 Records Found</h3>
-              <div class="recent-searches_table recods-table">
-                <table id="dataTable">
-                  <thead>
-                    <tr>
-                      <th>S/N</th>
-                      <th>Account Name</th>
-                      <th>Currency</th>
-                      <th>Product</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="faint-text">1</td>
-                      <td class="faint-text">Chukwuka Chiemelie Esther</td>
-                      <td class="faint-text">NGN</td>
-                      <td class="faint-text">Flax Account</td>
-                      <td class="bold-text"><img src="../../../assets/images/chevron-right.png" alt="icon" /></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <!-- <div class="pagination">
-                  <a class="prev" href="#"><img src="../../../assets//images/left.png" alt="icon">Previous</a>
-                  <div class="numbers-arr">
-                      <div id="dots"></div>
-                      <div id="right-arr"></div>
-                  </div>
-                  <a class="next" href="#">Next <img src="../../../assets/images/right.png" alt="icon"></a>
-                </div> -->
-              </div>
+            <div class="each-quick_link">
+              <p>Infopool</p>
+              <img
+                src="../../../assets/images/arrow-right.png"
+                alt="icon"
+              />
             </div>
+            <div class="each-quick_link">
+              <p>Infopool</p>
+              <img
+                src="../../../assets/images/arrow-right.png"
+                alt="icon"
+              />
+            </div>
+            <div class="acc-body_line"></div>
+            <div class="pagination">
+              <p class="prev"><img
+                  src="../../../assets//images/left.png"
+                  alt="icon"
+                />Previous</p>
+              <div class="numbers-arr">
+                <div class="left-arr">
+                    <p class="active">1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+                <div id="dots">...</div>
+                <div class="right-arr">
+                    <p>8</p>
+                    <p>9</p>
+                    <p>10</p>
+                </div>
+              </div>
+              <p class="next">Next
+                <img src="../../../assets/images/right.png" alt="icon"
+              /></p>
+          </div>
+            <div class="mob-pagination">
+              <p class="prev"><img
+                  src="../../../assets//images/left.png"
+                  alt="icon"
+                /></p>
+              <div class="numbers-arr">
+                <div class="left-arr">
+                    <p class="active">1</p>
+                    <p>2</p>
+                </div>
+                <div id="dots">...</div>
+                <div class="right-arr">
+                    <p>10</p>
+                </div>
+              </div>
+              <p class="next">
+                <img src="../../../assets/images/right.png" alt="icon"
+              /></p>
+          </div>
+          </div>
         </div>
       </div>
     </main>
-    <script src="./dashboard.js"></script>
+    <script src="./report.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

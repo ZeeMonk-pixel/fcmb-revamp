@@ -20,16 +20,6 @@
       crossorigin="anonymous"
     />
     <script
-      src="../../../components/CompSidenav.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <script
-      src="../../../components/MobileNav.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <script
       src="../../../components/Pagination.js"
       type="text/javascript"
       defer
@@ -43,10 +33,148 @@
   <body>
     <main class="dashboard-home">
       <div class="dashboard-side">
-        <comp-side></comp-side>
+        <div class="side-nav">
+          <div class="logo-head">
+            <img src="../../../assets/images/logo-small.png" alt="logo" />
+            <h2>INFOPOOL</h2>
+          </div>
+          <div class="search-field">
+            <img src="../../../assets/images/search.png" alt="logo" />
+            <input type="text" placeholder="Search" />
+          </div>
+          <div class="dashboard-links">
+            <a class="active" href="../dashboard/dashboard-home.html"
+              ><div class="single-link">
+                <img src="../../../assets/images/bar-chart.png" alt="icon" />
+                <h4>Home</h4>
+              </div></a
+            >
+            <a href="../dashboard/information.html"
+              ><div class="single-link">
+                <img src="../../../assets/images/info.png" alt="icon" />
+                <h4>Information</h4>
+              </div></a
+            >
+            <a href="#cpc"
+              ><div class="single-link">
+                <img src="../../../assets/images/mails-switch.png" alt="icon" />
+                <h4>CPC</h4>
+              </div></a
+            >
+            <a href="../dashboard/application.html"
+              ><div class="single-link">
+                <img src="../../../assets/images/report.png" alt="icon" />
+                <h4>Application</h4>
+              </div></a
+            >
+            <a href="../dashboard/reporting.html"
+              ><div class="single-link">
+                <img src="../../../assets/images/check-square.png" alt="icon" />
+                <h4>Reporting</h4>
+              </div></a
+            >
+            <div class="single-link log-out">
+              <img src="../../../assets/images/log-out.png" alt="icon" />
+              <h4>Log out</h4>
+            </div>
+          </div>
+          <div class="dashboard-bottom">
+            <div class="dashboard-line"></div>
+            <div class="bottom-profile">
+              <img src="../../../assets/images/Avatar.png" alt="avatar" />
+              <div class="profile-cont">
+                <h4>Olivia Rhye</h4>
+                <p>SOL ID: 22334</p>
+              </div>
+            </div>
+            <div class="last-login">
+              <p>Last Login: <br />23:11:16 ; 24 MAY, 2023</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="dashboard-body">
-        <mobile-nav></mobile-nav>
+        <div class="mobile-nav_dashboard">
+          <div class="mobile-nav">
+            <img
+              class="menuIcon"
+              src="../../../assets/images/menu.png"
+              alt="menu"
+            />
+            <img
+              class="closeIcon"
+              src="../../../assets/images/close.png"
+              alt="close"
+            />
+          </div>
+          <div class="mobile-menu">
+            <div class="logo-head">
+              <img src="../../../assets/images/logo-small.png" alt="logo" />
+              <h2>INFOPOOL</h2>
+            </div>
+            <div class="search-field">
+              <img src="../../../assets/images/search.png" alt="logo" />
+              <input type="text" placeholder="Search" />
+            </div>
+            <div class="dashboard-links">
+              <a
+                class="active"
+                href="/pages/compliance/dashboard/dashboard-home.html"
+                ><div class="single-link">
+                  <img src="../../../assets/images/bar-chart.png" alt="icon" />
+                  <h4>Home</h4>
+                </div></a
+              >
+              <a href="/pages/compliance/dashboard/information.html"
+                ><div class="single-link">
+                  <img src="../../../assets/images/info.png" alt="icon" />
+                  <h4>Information</h4>
+                </div></a
+              >
+              <a href="#cpc"
+                ><div class="single-link">
+                  <img
+                    src="../../../assets/images/mails-switch.png"
+                    alt="icon"
+                  />
+                  <h4>CPC</h4>
+                </div></a
+              >
+              <a href="../dashboard/application.html"
+                ><div class="single-link">
+                  <img src="../../../assets/images/report.png" alt="icon" />
+                  <h4>Application</h4>
+                </div></a
+              >
+              <a href="../dashboard/reporting.html"
+                ><div class="single-link">
+                  <img
+                    src="../../../assets/images/check-square.png"
+                    alt="icon"
+                  />
+                  <h4>Reporting</h4>
+                </div></a
+              >
+              <div class="single-link log-out">
+                <img src="../../../assets/images/log-out.png" alt="icon" />
+                <h4>Log out</h4>
+              </div>
+            </div>
+            <div class="dashboard-bottom">
+              <div class="dashboard-line"></div>
+              <div class="bottom-profile">
+                <img src="../../../assets/images/Avatar.png" alt="avatar" />
+                <div class="profile-cont">
+                  <h4>Olivia Rhye</h4>
+                  <p>SOL ID: 22334</p>
+                </div>
+              </div>
+              <div class="last-login">
+                <p>Last Login: <br />23:11:16 ; 24 MAY, 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <h2>Welcome, Chukwuka Esther</h2>
         <div class="search-query">
           <div class="search-top">
@@ -101,47 +229,62 @@
               <div id="mgt-body" class="mgt-body">
                 <div class="mgt-item">
                   <div class="mgt-text">
-                    <img src="../../../assets/images/file.png" alt="icon">
+                    <img src="../../../assets/images/file.png" alt="icon" />
                     <p>Outward Clearing Report</p>
                   </div>
                   <div class="arrow-div">
-                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                    <img
+                      src="../../../assets/images/arrow-right.png"
+                      alt="icon"
+                    />
                   </div>
                 </div>
                 <div class="mgt-item">
                   <div class="mgt-text">
-                    <img src="../../../assets/images/file.png" alt="icon">
+                    <img src="../../../assets/images/file.png" alt="icon" />
                     <p>Swift Messages</p>
                   </div>
                   <div class="arrow-div">
-                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                    <img
+                      src="../../../assets/images/arrow-right.png"
+                      alt="icon"
+                    />
                   </div>
                 </div>
                 <div class="mgt-item">
                   <div class="mgt-text">
-                    <img src="../../../assets/images/file.png" alt="icon">
+                    <img src="../../../assets/images/file.png" alt="icon" />
                     <p>Balance Sheet Deposit</p>
                   </div>
                   <div class="arrow-div">
-                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                    <img
+                      src="../../../assets/images/arrow-right.png"
+                      alt="icon"
+                    />
                   </div>
                 </div>
                 <div class="mgt-item">
                   <div class="mgt-text">
-                    <img src="../../../assets/images/file.png" alt="icon">
+                    <img src="../../../assets/images/file.png" alt="icon" />
                     <p>Smart Card Validation</p>
                   </div>
                   <div class="arrow-div">
-                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                    <img
+                      src="../../../assets/images/arrow-right.png"
+                      alt="icon"
+                    />
                   </div>
                 </div>
                 <div class="mgt-item">
                   <div class="mgt-text">
-                    <img src="../../../assets/images/file.png" alt="icon">
+                    <img src="../../../assets/images/file.png" alt="icon" />
                     <p>Staff Promo</p>
                   </div>
                   <div class="arrow-div">
-                    <img src="../../../assets/images/arrow-right.png" alt="icon">
+                    <img
+                      src="../../../assets/images/arrow-right.png"
+                      alt="icon"
+                    />
                   </div>
                 </div>
               </div>
@@ -164,21 +307,41 @@
                       <td class="bold-text">1</td>
                       <td class="bold-text">2REYDRYJ</td>
                       <td class="bold-text">Chukwuka Chiemelie Esther</td>
-                      <td class="bold-text"><span class="first-line">24 May, 2020</span>
-                        <br> <span class="second-line">23:18:33</span></td>
-                      <td class="bold-text"><img src="../../../assets/images/chevron-right.png" alt="icon" /></td>
+                      <td class="bold-text">
+                        <span class="first-line">24 May, 2020</span> <br />
+                        <span class="second-line">23:18:33</span>
+                      </td>
+                      <td class="bold-text">
+                        <img
+                          src="../../../assets/images/chevron-right.png"
+                          alt="icon"
+                        />
+                      </td>
                     </tr>
                   </tbody>
                 </table>
                 <div class="pagination">
-                  <a class="prev" href="#"><img src="../../../assets//images/left.png" alt="icon">Previous</a>
-                  <!-- Page numbers will be added here dynamically -->
+                  <p class="prev"><img
+                      src="../../../assets//images/left.png"
+                      alt="icon"
+                    />Previous</p>
                   <div class="numbers-arr">
-                      <div id="dots"></div>
-                      <div id="right-arr"></div>
+                    <div class="left-arr">
+                        <p class="active">1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                    <div id="dots">...</div>
+                    <div class="right-arr">
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                    </div>
                   </div>
-                  <a class="next" href="#">Next <img src="../../../assets/images/right.png" alt="icon"></a>
-                </div>
+                  <p class="next">Next
+                    <img src="../../../assets/images/right.png" alt="icon"
+                  /></p>
+              </div>
               </div>
             </div>
           </div>
@@ -189,47 +352,80 @@
               <div id="quick-link">
                 <div class="each-quick_link">
                   <p>Finbank Statement</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Loan Self Service</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Loan Mastercard Transactions</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Draft Walk-in Charge Calculator</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Custom Duty Charge Calculator</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Custome Duty Walk-in Charge Calulator</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Memo Lift</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Risk Factor Assesment</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Freeze Account</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>Unfreeze Account</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
                 <div class="each-quick_link">
                   <p>New Reports</p>
-                  <img src="../../../assets/images/arrow-right.png" alt="icon">
+                  <img
+                    src="../../../assets/images/arrow-right.png"
+                    alt="icon"
+                  />
                 </div>
               </div>
             </div>
