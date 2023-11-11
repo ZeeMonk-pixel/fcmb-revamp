@@ -101,6 +101,7 @@
   width: fit-content;
 }
 .search-input-btn {
+  display: inline-flex;
   border-radius: 8px;
   border: 1px solid var(--primary-700, #5c068c);
   background: var(--primary-700, #5c068c);

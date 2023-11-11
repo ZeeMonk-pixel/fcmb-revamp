@@ -192,14 +192,16 @@
                   <input type="text" placeholder="Search" />
                 </div>
                 <div class="search-query_cont">
-                  <div id="select" class="select-query_field">
-                    <!-- <input id="select" type="text" placeholder="Finacle 10" /> -->
+                  <select id="select" class="select-query_field">
                     <p>Finacle 10</p>
                     <img
                       src="../../../assets/images/chevron-down.png"
                       alt="logo"
                     />
-                  </div>
+                    <option>Finacle 10</option>
+                    <option>Work Flow</option>
+                    <option>LTP Eligibility</option>
+                  </select>
                   <div class="opt-cont">
                     <div id="options" class="none options"></div>
                   </div>
@@ -321,27 +323,30 @@
                   </tbody>
                 </table>
                 <div class="pagination">
-                  <p class="prev"><img
+                  <p class="prev">
+                    <img
                       src="../../../assets//images/left.png"
                       alt="icon"
-                    />Previous</p>
+                    />Previous
+                  </p>
                   <div class="numbers-arr">
                     <div class="left-arr">
-                        <p class="active">1</p>
-                        <p>2</p>
-                        <p>3</p>
+                      <p class="active">1</p>
+                      <p>2</p>
+                      <p>3</p>
                     </div>
                     <div id="dots">...</div>
                     <div class="right-arr">
-                        <p>8</p>
-                        <p>9</p>
-                        <p>10</p>
+                      <p>8</p>
+                      <p>9</p>
+                      <p>10</p>
                     </div>
                   </div>
-                  <p class="next">Next
-                    <img src="../../../assets/images/right.png" alt="icon"
-                  /></p>
-              </div>
+                  <p class="next">
+                    Next
+                    <img src="../../../assets/images/right.png" alt="icon" />
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -433,7 +438,6 @@
         </div>
       </div>
     </main>
-    <script src="./dashboard.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>

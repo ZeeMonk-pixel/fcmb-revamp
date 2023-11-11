@@ -272,35 +272,102 @@
         <div class="account-info_cont">
           <div class="account-info">
             <h3>Account Details</h3>
-            <div id="account-info-content"></div>
+            <div id="account-info-content">
+              <div class="acc-item">
+                <h4>Cleared Balance:</h4>
+                <p>N10,000</p>
+              </div>
+              <div class="acc-item">
+                <h4>Uncleared Balance:</h4>
+                <p>N10,000</p>
+              </div>
+              <div class="acc-item">
+                <h4>Resereved Balance:</h4>
+                <p>N10,000</p>
+              </div>
+              <div class="acc-item">
+                <h4>Available Balance:</h4>
+                <p>N10,000</p>
+              </div>
+              <div class="acc-item">
+                <h4>Credit Transactions:</h4>
+                <p>N10,000</p>
+              </div>
+              <div class="acc-item">
+                <h4>Credit Transactions:</h4>
+                <p>N10,000</p>
+              </div>
+            </div>
           </div>
           <div class="account-info">
             <h3>Information Pod</h3>
-            <div id="info-pod-content"></div>
+            <div id="info-pod-content">             
+              <div class="acc-item">
+                <h4>Customer Name:</h4>
+                <p>Chukwuka Chiemelie Esther</p>
+              </div>
+              <div class="acc-item">
+                <h4>Account Number:</h4>
+                <p>908906869</p>
+              </div>
+              <div class="acc-item">
+                <h4>Product Name:</h4>
+                <p>Current Account</p>
+              </div>
+              <div class="acc-item">
+                <h4>Product Code:</h4>
+                <p>rt7890kli</p>
+              </div>
+              <div class="acc-item">
+                <h4>Currency:</h4>
+                <p>NGN</p>
+              </div>
+              <div class="acc-item">
+                <h4>BVN Watchlist:</h4>
+                <p>No</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="search-query">
           <div class="search-top acc-top">
-            <div id="acc-tabs"></div>
-            <div class="export-field">
-              <div id="export-div">
-                <img
-                  src="../../../assets/images/download-cloud.png"
-                  alt="icon"
-                />
-                <p>Export Statement</p>
-                <img
-                  src="../../../assets/images/chevron-down-gray.png"
-                  alt="icon"
-                />
+            <div id="acc-tabs">
+              <!-- <div class="acc-tab-item active-tab">
+                <h4>Customer Details</h4>
               </div>
-              <div id="export-opts" class="none"></div>
+              <div class="acc-tab-item">
+                <h4>Account Details</h4>
+              </div>
+              <div class="acc-tab-item">
+                <h4>Transaction History</h4>
+              </div>
+              <div class="acc-tab-item">
+                <h4>Other Accounts</h4>
+              </div>
+              <div class="acc-tab-item">
+                <h4>Loan Accounts</h4>
+              </div> -->
             </div>
+            <select id="export-div" class="export-field">
+              <img
+                src="../../../assets/images/download-cloud.png"
+                alt="icon"
+              />
+              <p>Export Statement</p>
+              <img
+                src="../../../assets/images/chevron-down-gray.png"
+                alt="icon"
+              />
+              <option>Export as Excel</option>
+              <option>Export as PDF</option>
+              <option>Export as MT9 40</option>
+              <option>Export as CAP Excel</option>
+            </select>
           </div>
           <div class="search-line"></div>
           <div class="search-bottom">
             <div id="acc-tabs"></div>
-            <div id="customer-details" class="none">
+            <div id="customer-details" class="flex">
               <div class="customer-item">
                 <img src="../../../assets/images/chevron-down.png" alt="icon" />
                 <h4>General Details</h4>
