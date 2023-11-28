@@ -28,6 +28,23 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
     <title>FCMB</title>
   </head>
   <body>
@@ -208,13 +225,14 @@
                 </div>
                 <div class="date-query_field">
                   <img src="../../../assets/images/calendar.png" alt="logo" />
-                  <input type="date" id="myDateInput" placeholder="Tran Date" />
-                  <label>Tran Date</label>
+                  <input type="date" id="myDateInput" />
+                  <label id="dateLabel">Tran Date</label>
                 </div>
-                <div class="date-query_field big-label">
-                  <img src="../../../assets/images/calendar.png" alt="logo" />
+                <div class="date-query_field big-label date-range">
+                  <!-- <img src="../../../assets/images/calendar.png" alt="logo" />
                   <input type="date" placeholder="Select date range" />
-                  <label>Select date range</label>
+                  <label>Select date range</label> -->
+                  <input type="text" name="daterange" value="Select date range" />
                 </div>
               </div>
               <div class="search-input-btn">
@@ -439,5 +457,20 @@
       </div>
     </main>
     <script src="./main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha384-o3LWG6TP1lA/MY1lgrkPqLl9wNf2zQ90Ewo41+3G3biDANRMhj/fUjl5kYZ8bpLO"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/moment.min.js"
+      integrity="sha384-0p04uSz/kz9AGfIRo61zXQpFaN/y7CqLcAilVv+o8EEd1TwBPld5eVVCc1BE2jGf"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/daterangepicker.min.js"
+      integrity="sha384-eUd5Ll5kC1O27Unl8SHBvD13/DyZj1hxJ1x6/wxGqooM9aDGrTIbWleS+XxPmz8"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

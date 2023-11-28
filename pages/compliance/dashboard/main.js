@@ -87,6 +87,18 @@
 //     });
 // });
 
+
+
+$(function() {
+  $('input[name="daterange"]').daterangepicker({
+    opens: 'left',
+    "showDropdowns": true,
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+});
+
+
 const menu = document.querySelector(".mobile-menu");
 const hamburger = document.querySelector(".mobile-nav");
 const closeIcon = document.querySelector(".closeIcon");
@@ -105,3 +117,24 @@ function toggleMenu() {
 }
 
 hamburger.addEventListener("click", toggleMenu);
+
+$(document).ready(function () {
+  var dateInput = $('#myDateInput');
+  var dateLabel = $("#dateLabel");
+
+  dateInput.attr('max', getCurrentDate());
+
+  dateInput.on('input', function () {
+    dateLabel.text(dateInput.val());
+  });
+
+  function getCurrentDate() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    return yyyy + '-' + mm + '-' + dd;
+  }
+
+})

@@ -88,6 +88,16 @@
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
+    background: var(--White, #fff);
+    color: var(--gray-900, #101828);
+    font-family: Gotham Bold;
+    font-size: 18px;
+    font-style: normal;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+    padding: 20px 14px;
 }
 #acc-tabs, #workflow-tabs{
     display: inline-flex;
@@ -165,8 +175,14 @@
     padding: 10px 16px;
     cursor: pointer;
 }
-.search-bottom{
+.acc-bottom{
     display: block;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    gap: 20px;
+    padding: 20px 14px;
+    background: white;
+    border-bottom: 1px solid #e4e7ec;
 }
 #customer-details, #account-details{
     /* display: flex; */

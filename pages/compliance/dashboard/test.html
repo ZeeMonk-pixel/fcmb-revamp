@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easepick Example</title>
+  <!-- Include Easepick CSS -->
+  <link rel="stylesheet" href="path/to/easepick.css">
+
+  <!-- Include any other necessary dependencies -->
+</head>
+<body>
+
+  <!-- Your HTML content -->
+  <input type="text" id="datePickerInput">
+
+  <!-- Include Easepick JavaScript -->
+  <script src="path/to/easepick.js"></script>
+
+  <!-- Initialize Easepick -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Replace 'YourConfigurationOptions' with the actual configuration options for Easepick
+      var picker = new Easepick('YourConfigurationOptions');
+      picker.attachTo('#datePickerInput');
+    });
+  </script>
+
+</body>
+</html>

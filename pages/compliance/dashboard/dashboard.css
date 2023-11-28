@@ -266,26 +266,112 @@
   line-height: 28px;
   padding: 20px 24px 19px 24px;
 }
-.recods-table th, .recods-table td{
-    padding: 20px 24px 19px 24px;
+.recods-table th,
+.recods-table td {
+  padding: 20px 24px 19px 24px;
+}
+
+/* date-picker   */
+/* .date-range {
+  border: 2px solid red;
+} */
+.daterangepicker {
+  width: 300px !important;
+  height: 440px !important;
+  overflow: hidden !important;
+  gap: 20px !important;
+}
+.drp-calendar {
+  width: 100% !important;
+}
+.drp-calendar.left {
+  width: 100% !important;
+}
+/* .drp-calendar.right{
+  border: 2px solid red !important;
+  display: none !important;
+} */
+.daterangepicker .calendar-table td {
+  /* border: 1px solid red !important; */
+  width: 15px !important;
+  min-width: 15px !important;
+  height: 15px !important;
+  line-height: 0 !important;
+}
+.table-condensed {
+  /* border: 2px solid green !important; */
+  width: 100% !important;
+}
+.table-condensed table {
+  padding: 3px !important;
+}
+/* .date-range input{
+  border: 1px solid red;
+  width: 100%;
+} */
+.next.available {
+  /* border: 2px solid red !important; */
+  position: absolute !important;
+  top: 0;
+  display: block !important;
+  background: transparent !important;
+}
+.prev.available {
+  /* border: 2px solid red !important; */
+  position: absolute !important;
+  top: 0;
+  display: block !important;
+  background: transparent !important;
+}
+.drp-buttons {
+  /* border: 2px solid red !important; */
+  position: absolute !important;
+  top: 400px;
+  display: block !important;
+  border: transparent !important;
+}
+.table-condensed thead tr th.month{
+  /* border: 1px solid red !important; */
+  background: white !important;
+  line-height: 8px !important;
+}
+.table-condensed tbody tr td {
+  /* border: 2px solid red !important; */
+  border-radius: 20% !important;
+}
+.table-condensed tbody tr .active {
+  /* border: 2px solid red !important; */
+  background: var(--primary-700, #5c068c) !important;
+  border-radius: 20%;
+}
+.table-condensed tbody tr .active.in-range {
+  background: var(--primary-700, #5c068c) !important;
+}
+.table-condensed tbody tr .in-range {
+  background: var(--primary-25, #F9EEFF) !important;
+}
+.date-range input{
+  height: 100% !important;
+  /* border: 1px solid red !important; */
+  cursor: pointer;
 }
 
 /* date  */
-.date-query_field{
-    position: relative;
+.date-query_field {
+  position: relative;
 }
-.date-query_field label{
-    position: absolute;
-    left: 45px;
-    color: var(--gray-500, #667085);
-    font-family: Gotham;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px; /* 150% */
+.date-query_field label {
+  position: absolute;
+  left: 45px;
+  color: var(--gray-500, #667085);
+  font-family: Gotham;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
 }
-.big-label{
-    width: 206px;
+.big-label {
+  width: 206px;
 }
 ::-webkit-datetime-edit {
   padding: 1em;
