@@ -109,3 +109,108 @@ $(document).ready(function () {
 
 });
 
+
+
+$(document).ready( function () {
+  const $genDetails = $("#genDetails");
+  const $genDetailsAccord = $("#genDetailsAccord");
+  const $accInfo = $('#accInfo');
+  const $accInfoAccord = $('#accInfoAccord');
+  const $genInfo = $('#genInfo');
+  const $genInfoAccord = $('#genInfoAccord');
+  const $advancedInfo = $('#advancedInfo');
+  const $advancedInfoAccord = $('#advancedInfoAccord');
+  const $mandateInfo = $('#mandateInfo');
+  const $mandateInfoAccord = $('#mandateInfoAccord');
+  const $accMaintain = $('#accMaintain');
+  const $accMaintainAccord = $('#accMaintainAccord');
+  
+
+  $genDetails.on('click', function(){
+    if ($genDetailsAccord.hasClass('none')){
+      $genDetailsAccord.removeClass('none');
+    } else {
+      $genDetailsAccord.addClass('none')
+    }
+  })
+
+  $accInfo.on('click', function(){
+    if ($accInfoAccord.hasClass('none')){
+      $accInfoAccord.removeClass('none')
+    } else{
+      $accInfoAccord.addClass('none')
+    }
+  })
+
+  $genInfo.on('click', function(){
+    if ($genInfoAccord.hasClass('none')){
+      $genInfoAccord.removeClass('none')
+    } else{
+      $genInfoAccord.addClass('none')
+    }
+  })
+
+  $advancedInfo.on('click', function(){
+    if ($advancedInfoAccord.hasClass('none')){
+      $advancedInfoAccord.removeClass('none')
+    } else{
+      $advancedInfoAccord.addClass('none')
+    }
+  })
+
+  $mandateInfo.on('click', function(){
+    if ($mandateInfoAccord.hasClass('none')){
+      $mandateInfoAccord.removeClass('none')
+    } else{
+      $mandateInfoAccord.addClass('none')
+    }
+  })
+
+  $accMaintain.on('click', function(){
+    if ($accMaintainAccord.hasClass('none')){
+      $accMaintainAccord.removeClass('none')
+    } else{
+      $accMaintainAccord.addClass('none')
+    }
+  })
+
+})
+
+$(document).ready(function (){
+  const $genAccord = $("#genDetailsAccord");
+  const $closeModal = $("#closeModal");
+  const $overlay = $("#overlay");
+
+  $genAccord.on('click', 'img', function(){
+
+    var clickedImage = $(this);
+    var content = clickedImage.clone();
+    $("#modalContent").html(content);
+
+    $("#modalOverlay").fadeIn();
+    $overlay.removeClass('none');
+    $overlay.fadeIn();
+    
+  })
+  $closeModal.on('click',(function (e) {
+      $("#modalOverlay").fadeOut();
+      $("#modalOverlay").removeClass("zoomed").css("transform", "scale(1)");
+      $overlay.addClass('none');
+      $overlay.fadeOut();
+  }));
+
+  $("#modalOverlay").on("wheel", function (e) {
+    e.preventDefault(); 
+    var scale = e.originalEvent.deltaY > 0 ? 0.9 : 1.1;
+    zoomContent(scale);
+  });
+
+  function zoomContent(scale) {
+    var modalContent = $("#modalOverlay");
+    var currentScale = parseFloat(modalContent.css("transform").split(",")[3]) || 1;
+    var newScale = currentScale * scale;
+    newScale = Math.max(0.5, Math.min(2, newScale));
+    modalContent.css("transform", "scale(" + newScale + ")");
+    modalContent.toggleClass("zoomed", newScale !== 1);
+  }
+})

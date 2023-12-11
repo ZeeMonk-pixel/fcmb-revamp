@@ -28,6 +28,7 @@
   </head>
   <body>
     <main class="dashboard-home">
+      <div id="overlay" class="overlay none"></div>
     <div id="trans-details" class="transaction-modal none">
         <div class="trans-modal_head">
             <h3>Transaction Explorer</h3>
@@ -368,31 +369,175 @@
           <div class="acc-bottom">
             <!-- <div id="acc-tabs"></div> -->
             <div id="customer-details" class="flex">
-              <div class="customer-item">
+              <div id="genDetails" class="customer-item">
                 <img src="../../../assets/images/chevron-down.png" alt="icon" />
                 <h4>General Details</h4>
               </div>
-              <div class="customer-item">
+              <div id="genDetailsAccord" class="general-details_accod none"> 
+                <img src="../../../assets/images/bg-pic.png" alt="bg-pic1">
+                <img src="../../../assets/images/logo.png" alt="bg-pic2">
+                <img src="../../../assets/images/bg-pic.png" alt="bg-pic3">
+              </div>
+              <div id="modalOverlay">
+                <div class="close-icon_div">
+                  <i class="fas fa-times close-icon" id="closeModal"></i>
+                </div>
+                <div id="modalContent">
+                </div>
+              </div>
+            
+              <div id="accInfo" class="customer-item">
                 <img src="../../../assets/images/chevron-down.png" alt="icon" />
                 <h4>Account Information</h4>
               </div>
+              <div id="accInfoAccord" class="general-details_accod none">            
+                <div class="acc-item">
+                  <h4>Customer Name:</h4>
+                  <p>Chukwuka Chiemelie Esther</p>
+                </div>
+                <div class="acc-item">
+                  <h4>Account Number:</h4>
+                  <p>908906869</p>
+                </div>
+                <div class="acc-item">
+                  <h4>Product Name:</h4>
+                  <p>Current Account</p>
+                </div>
+                <div class="acc-item">
+                  <h4>Product Code:</h4>
+                  <p>rt7890kli</p>
+                </div>
+                <div class="acc-item">
+                  <h4>Currency:</h4>
+                  <p>NGN</p>
+                </div>
+                <div class="acc-item">
+                  <h4>BVN Watchlist:</h4>
+                  <p>No</p>
+                </div>
+
+              </div>
             </div>
             <div id="account-details" class="none">
-              <div class="acc-details-item">
+              <div id="genInfo" class="acc-details-item">
                 <img src="../../../assets/images/chevron-down.png" alt="icon" />
                 <h4>General Information</h4>
               </div>
-              <div class="acc-details-item">
+              <div id="genInfoAccord" class="general-details_accod none">            
+                    <div class="acc-item">
+                      <h4>Customer Name:</h4>
+                      <p>Chukwuka Chiemelie Esther</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Account Number:</h4>
+                      <p>908906869</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Product Name:</h4>
+                      <p>Current Account</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Product Code:</h4>
+                      <p>rt7890kli</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Currency:</h4>
+                      <p>NGN</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>BVN Watchlist:</h4>
+                      <p>No</p>
+                    </div>
+              </div>
+              <div id="advancedInfo" class="acc-details-item">
                 <img src="../../../assets/images/chevron-down.png" alt="icon" />
                 <h4>Advanced Information</h4>
               </div>
-              <div class="acc-details-item">
+              <div id="advancedInfoAccord" class="general-details_accod none">            
+                    <div class="acc-item">
+                      <h4>Customer Name:</h4>
+                      <p>Chukwuka Chiemelie Esther</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Account Number:</h4>
+                      <p>908906869</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Product Name:</h4>
+                      <p>Current Account</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Product Code:</h4>
+                      <p>rt7890kli</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Currency:</h4>
+                      <p>NGN</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>BVN Watchlist:</h4>
+                      <p>No</p>
+                    </div>
+              </div>
+              <div id="mandateInfo" class="acc-details-item">
                 <img src="../../../assets/images/chevron-down.png" alt="icon" />
                 <h4>Mandate Information</h4>
               </div>
-              <div class="acc-details-item">
+              <div id="mandateInfoAccord" class="general-details_accod none">            
+                    <div class="acc-item">
+                      <h4>Customer Name:</h4>
+                      <p>Chukwuka Chiemelie Esther</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Account Number:</h4>
+                      <p>908906869</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Product Name:</h4>
+                      <p>Current Account</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Product Code:</h4>
+                      <p>rt7890kli</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Currency:</h4>
+                      <p>NGN</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>BVN Watchlist:</h4>
+                      <p>No</p>
+                    </div>
+              </div>
+              <div id="accMaintain" class="acc-details-item">
                 <img src="../../../assets/images/chevron-down.png" alt="icon" />
                 <h4>Account Maintenance Information</h4>
+              </div>
+              <div id="accMaintainAccord" class="general-details_accod none">            
+                    <div class="acc-item">
+                      <h4>Customer Name:</h4>
+                      <p>Chukwuka Chiemelie Esther</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Account Number:</h4>
+                      <p>908906869</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Product Name:</h4>
+                      <p>Current Account</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Product Code:</h4>
+                      <p>rt7890kli</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>Currency:</h4>
+                      <p>NGN</p>
+                    </div>
+                    <div class="acc-item">
+                      <h4>BVN Watchlist:</h4>
+                      <p>No</p>
+                    </div>
               </div>
             </div>
             <div class="table-container">
